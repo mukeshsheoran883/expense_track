@@ -85,7 +85,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const Text('Category'),
+                  const Text('Select Category'),
                   DropdownButton(
                     value: currentValue,
                     items: list.map((e) {
@@ -111,7 +111,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  hintText: 'Fill Name',
+                  hintText: 'Input Name',
                 ),
               ),
               const SizedBox(
@@ -124,7 +124,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  hintText: 'Fill Price',
+                  hintText: 'Input Price',
                 ),
               ),
               const SizedBox(
@@ -137,7 +137,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  hintText: 'Fill Description',
+                  hintText: 'Input description',
                 ),
               ),
               const SizedBox(

@@ -142,9 +142,10 @@ import 'dart:convert';
 import 'package:expense_tracker/model/expense_Info.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SharedPerfService{
+class SharedPerfService {
   static const String expenseKey = '';
-static Future<void>addExpense(ExpenseInfo expenseInfo) async {
+
+  static Future<void> addExpense(ExpenseInfo expenseInfo) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     String addExp = jsonEncode(expenseInfo.toMap());
     List<String> expenseList =
@@ -153,12 +154,10 @@ static Future<void>addExpense(ExpenseInfo expenseInfo) async {
     sharedPreferences.setStringList('ExpenseData', expenseList);
   }
 
-
-
-  static Future<List<ExpenseInfo>> getExpenses()async{
+  static Future<List<ExpenseInfo>> getExpenses() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     List<String> list = sharedPreferences.getStringList('ExpenseData') ?? [];
-    List<ExpenseInfo> expList =[];
+    List<ExpenseInfo> expList = [];
     for (int i = 0; i < list.length; i++) {
       String showExp = list[i];
       Map<String, dynamic> map = jsonDecode(showExp);

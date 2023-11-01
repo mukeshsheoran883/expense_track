@@ -4,7 +4,6 @@ import 'package:expense_tracker/model/expense_Info.dart';
 import 'package:expense_tracker/screen/AddExpenseScreen.dart';
 import 'package:expense_tracker/shared_preference_service/shared_preference_service.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class ShowExpenseScreen extends StatefulWidget {
   const ShowExpenseScreen({super.key});
@@ -37,7 +36,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
         backgroundColor: backgroundColor,
         title: const Center(
           child: Text(
-            'Show Expense',
+            'Show Expenses',
             style: TextStyle(color: iconColor),
           ),
         ),
