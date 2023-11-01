@@ -143,20 +143,20 @@ import 'package:expense_tracker/model/expense_Info.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPerfService {
-  static const String expenseKey = '';
+  static const String expenseKey = 'ExpenseData';
 
   static Future<void> addExpense(ExpenseInfo expenseInfo) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     String addExp = jsonEncode(expenseInfo.toMap());
     List<String> expenseList =
-        sharedPreferences.getStringList('ExpenseData') ?? [];
+        sharedPreferences.getStringList(expenseKey) ?? [];
     expenseList.add(addExp);
-    sharedPreferences.setStringList('ExpenseData', expenseList);
+    sharedPreferences.setStringList(expenseKey, expenseList);
   }
 
   static Future<List<ExpenseInfo>> getExpenses() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    List<String> list = sharedPreferences.getStringList('ExpenseData') ?? [];
+    List<String> list = sharedPreferences.getStringList(expenseKey) ?? [];
     List<ExpenseInfo> expList = [];
     for (int i = 0; i < list.length; i++) {
       String showExp = list[i];
