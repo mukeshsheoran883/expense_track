@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:expense_tracker/model/color.dart';
 import 'package:expense_tracker/model/expense_Info.dart';
+import 'package:expense_tracker/model/string.dart';
 import 'package:expense_tracker/screen/AddExpenseScreen.dart';
 import 'package:expense_tracker/shared_preference_service/shared_preference_service.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
         backgroundColor: backgroundColor,
         title: const Center(
           child: Text(
-            'Show Expenses',
+            AppStrings.showExpenseTitle,
             style: TextStyle(color: iconColor),
           ),
         ),
@@ -94,7 +95,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
               children: [
                 ListTile(
                   title: const Text(
-                    'Category',
+                    AppStrings.category,
                     style: TextStyle(
                       color: iconColor,
                       fontWeight: FontWeight.bold,
@@ -109,7 +110,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
                 ),
                 ListTile(
                   title: const Text(
-                    'Name',
+                    AppStrings.name,
                     style: TextStyle(
                       color: iconColor,
                       fontWeight: FontWeight.bold,
@@ -124,7 +125,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
                 ),
                 ListTile(
                   title: const Text(
-                    'Price',
+                    AppStrings.price,
                     style: TextStyle(
                       color: iconColor,
                       fontWeight: FontWeight.bold,
@@ -139,7 +140,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
                 ),
                 ListTile(
                   title: const Text(
-                    'Description',
+                    AppStrings.description,
                     style: TextStyle(
                       color: iconColor,
                       fontWeight: FontWeight.bold,
@@ -174,7 +175,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
               children: [
                 ListTile(
                   title: const Text(
-                    'Category',
+                    AppStrings.category,
                     style: TextStyle(
                       color: iconColor,
                       fontWeight: FontWeight.bold,
@@ -191,7 +192,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
                 ),
                 ListTile(
                   title: const Text(
-                    'Name',
+                    AppStrings.name,
                     style: TextStyle(
                       color: iconColor,
                       fontWeight: FontWeight.bold,
@@ -208,7 +209,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
                 ),
                 ListTile(
                   title: const Text(
-                    'Price',
+                    AppStrings.price,
                     style: TextStyle(
                       color: iconColor,
                       fontWeight: FontWeight.bold,
@@ -225,7 +226,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
                 ),
                 ListTile(
                   title: const Text(
-                    'Description',
+                    AppStrings.description,
                     style: TextStyle(
                       color: iconColor,
                       fontWeight: FontWeight.bold,
