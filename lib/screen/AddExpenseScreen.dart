@@ -1,10 +1,8 @@
-import 'dart:convert';
+
 import 'package:expense_tracker/model/color.dart';
 import 'package:expense_tracker/model/expense_Info.dart';
-import 'package:expense_tracker/screen/show_expense_screen.dart';
 import 'package:expense_tracker/shared_preference_service/shared_preference_service.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class AddExpenseScreen extends StatefulWidget {
   const AddExpenseScreen({super.key});
@@ -19,11 +17,11 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
   TextEditingController priceController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
 
-  TimeOfDay _time = TimeOfDay(hour: 0, minute: 0);
+  TimeOfDay _time = const TimeOfDay(hour: 0, minute: 0);
 
   // Time
 
-  void _selectTime() async {
+  void selectTime() async {
     final TimeOfDay? newTime = await showTimePicker(
       context: context,
       initialTime: _time,
