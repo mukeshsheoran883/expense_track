@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:expense_tracker/model/color.dart';
 import 'package:expense_tracker/model/expense_Info.dart';
 import 'package:expense_tracker/model/string.dart';
@@ -47,7 +46,10 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
               isListView = !isListView;
               setState(() {});
             },
-            icon: Icon(isListView ? Icons.list : Icons.grid_view_outlined,color: iconColor,),
+            icon: Icon(
+              isListView ? Icons.list : Icons.grid_view_outlined,
+              color: iconColor,
+            ),
           )
         ],
       ),
@@ -61,8 +63,8 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
           Icons.add,
           color: iconColor,
         ),
-        onPressed: ()async {
-         await Navigator.push(
+        onPressed: () async {
+          await Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) {
@@ -70,7 +72,7 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
               },
             ),
           );
-         showExpense();
+          showExpense();
         },
       ),
     );
@@ -248,5 +250,4 @@ class _ShowExpenseScreenState extends State<ShowExpenseScreen> {
       },
     );
   }
-
 }

@@ -19,7 +19,6 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
 
   TimeOfDay _time = const TimeOfDay(hour: 0, minute: 0);
 
-  // Time
 
   void selectTime() async {
     final TimeOfDay? newTime = await showTimePicker(
