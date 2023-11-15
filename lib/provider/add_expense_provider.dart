@@ -1,4 +1,4 @@
-import 'package:expense_tracker/model/expense_Info.dart';
+import 'package:expense_tracker/model/expense_info_model.dart';
 import 'package:expense_tracker/shared_preference_service/shared_preference_service.dart';
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,7 @@
 import 'package:expense_tracker/model/color.dart';
-import 'package:expense_tracker/model/expense_Info.dart';
+import 'package:expense_tracker/model/expense_info_model.dart';
 import 'package:expense_tracker/model/string.dart';
-import 'package:expense_tracker/screen/AddExpenseScreen.dart';
+import 'package:expense_tracker/screen/add_expense_screen.dart';
 import 'package:expense_tracker/shared_preference_service/shared_preference_service.dart';
 import 'package:flutter/material.dart';
 

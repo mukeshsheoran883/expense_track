@@ -1,5 +1,5 @@
 import 'package:expense_tracker/model/color.dart';
-import 'package:expense_tracker/model/expense_Info.dart';
+import 'package:expense_tracker/model/expense_info_model.dart';
 
 import 'package:expense_tracker/provider/add_expense_provider.dart';
 

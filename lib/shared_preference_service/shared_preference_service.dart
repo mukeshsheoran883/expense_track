@@ -139,7 +139,7 @@
 // const defaultLetterSpacing = 0.03;
 import 'dart:convert';
 
-import 'package:expense_tracker/model/expense_Info.dart';
+import 'package:expense_tracker/model/expense_info_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPerfService {
